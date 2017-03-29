@@ -65,11 +65,35 @@ var browserSyncOptions = {
 
 ### Dependencies
 
-- Podemos-gravity-import
-- Podemos-milestone
-- Podemos-streaming
-- Podemos\undestrap
+- Podemos-gravity-import https://github.com/podemos-info/podemos-gravity-import
+- Podemos-milestone https://github.com/podemos-info/podemos-milestones
+- Podemos-streaming https://github.com/podemos-info/podemos-streamings
+- Podemos\undestrap https://github.com/podemos-info/understrap
 
-### Other dependencies
+### Plugins used
 
 - Advanced Custom Fields
+- Advanced Custom Fields: Date and Time Picker
+- Beaver Builder Plugin (versión ligera): para editar las páginas visualmente
+- Contact Form 7
+- Asesor de Cookies
+- Desactivar Comentarios
+- Display Posts Shortcode
+- Display Widgets
+- Enable Media Replace
+- Enhanced Text Widget
+- EWWW Image Optimizer
+- Google Analytics by MonsterInsights
+- Incrustaciones Fluidas de Video
+- Modernizr
+- Posts Order
+- Q2W3 Fixed Widget
+- Tabla de Contenidos Plus
+- W3 Total Cache
+- WP Accessibility
+- WP All Export
+- WP Editor
+- Wp-D3
+- WPML Multilingual CMS
+- WPML Sticky Links
+- WPML String Translation
