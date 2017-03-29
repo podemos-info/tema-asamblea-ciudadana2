@@ -1,0 +1,894 @@
+@mixin icon($icon) {
+    @include fa-icon;
+    @extend .fa;
+    @extend .fa-#{$icon}:before;
+}
+.a11y-toolbar {
+    top: inherit;
+    ul li button { 
+        border-radius: 0px !important;
+        border: none;
+        background: $color-warning;
+        padding: 1px 5px;
+        .aticon {
+            color: white;
+        }
+        &:hover .aticon {
+            color: black; 
+        }
+    }
+}
+html{
+    font-size: 17px;
+}
+h1, .h1 {
+		font-family: $headings-font-family;
+    font-size: 2.5rem;
+		color: $headings-color;
+	
+	&.entry-title {
+		font-size: 1.8rem;
+		font-family: $font-family-sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+	}
+}
+
+h2, .h2 {
+		font-family: $font-family-sans-serif;
+    color: $purple-font;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+h3, .h3 {
+		font-family: $font-family-sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.lead {
+    color: $purple-font;
+    font-weight: 500;
+}
+#wrapper-footer{
+	padding: 0;
+}
+.topnav {
+	background: $very-dark-purple;
+	.nav-link{
+	    font-size: 0.723rem;
+      font-family: $headings-font-family;
+      
+	}
+}
+.topnav, .down-footer, .up-footer, .franja-voluntarios {
+	color: $white-headings-color;
+	a{
+        color: $white-headings-color;
+        &:hover{
+    	    color: $green;
+        }
+    }
+}
+.navbar{
+    padding-bottom: 0;
+    padding-top: 2rem;
+    min-height: 82.5px;
+    .navbar-brand {
+    	margin-top: -1.25rem;
+    }
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .active .nav-link{
+    background-color: $dark-purple;
+}
+.navbar-toggleable-md .navbar-nav {
+ .nav-link {
+    padding: 0.8rem 1rem;
+    text-transform: uppercase;
+    font-weight:bolder;
+    letter-spacing: 0.47px;
+    font-family: $headings-font-family;
+    font-size: 0.835rem;
+    white-space: nowrap;
+  }
+  .dropdown-menu .nav-link { 
+  white-space: initial;
+  }
+}
+.link-tienda a:before {
+    @include icon(shopping-cart);
+    margin-right: 5px;
+}
+.presentacion-documentos{
+	.widget-title:before {
+	  @include icon(user-plus);
+    margin-right: 5px;
+	}
+}
+.btn {
+    font-family: $headings-font-family;
+}
+.post-thumbnail {
+	margin-bottom: 1rem;
+}
+
+.home .fl-row-full-height .fl-row-content-wrap {
+    min-height: 90vh;
+}
+.noticias {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+1,ffffff+67,754372+67,754372+100 */
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(left, #ffffff 1%, #ffffff 67%, #754372 67%, #754372 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ffffff 1%,#ffffff 67%,#754372 67%,#754372 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ffffff 1%,#ffffff 67%,#754372 67%,#754372 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#754372',GradientType=1 ); /* IE6-9 */
+
+  @include media-breakpoint-down(sm) {
+    background: none;
+  }
+}
+.presentacion{
+    background: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    h1{
+        font-size: $font-size-h1*1.2; 
+        font-weight: bolder;
+    }
+    a.btn-lg{
+        border-radius: 25px;
+        padding-right: 50px;
+        padding-left:  50px;
+        &:hover{
+            color: $green;
+        }
+    }
+}
+.actualizaciones{
+    h2{
+        font-size:0.8rem;
+        color: $gray-light;
+        text-transform: uppercase;
+    }
+    ul{
+      padding: 0;
+      li{
+        list-style: none;
+        display: block;
+        margin: 10px 0;
+        a{
+          color: #313131;
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 2rem;
+          margin-top: 30px;
+        }
+        span{
+        	display: block; 
+          clear: both;
+        }
+      }
+
+    } 
+}
+.proximos-hitos, .pretty-box-light{
+    background-color: $sidebar-purple;  
+    p{
+  	    color:$white-headings-color;
+    }
+    a.more_link{
+      color: $white-headings-color;
+      font-size: 0.8rem;
+      font-weight:bolder;
+      display:block;
+    }
+}
+.milestone-group {
+  .pm-end_day, .pm-start_day, .pm-month{
+    color: $dark-sidebar-purple;
+  }
+}
+.pm-end_day, .pm-start_day, .pm-month{
+  color: $white-headings-color; 
+}
+
+.proximos-hitos {
+    h2 i:before, .widget-title i:before {
+        margin-right: 10px;
+    }
+}
+.fa{
+   font-size:150%;
+}
+	.fa-shopping-cart:before, .link-tienda a:before {
+    font-size:100%;
+	}
+	.consigue-tu-entrada {
+    padding-top: 20px;
+      h2:before, .widget-title:before {
+          @include icon(ticket);
+          margin-right: 10px;
+          font-size:150%;
+      }
+    h3.widget-title{
+      margin-top:0;
+    }
+  }
+
+.consigue-tu-entrada, .pretty-box-dark{
+    background-color: $dark-sidebar-purple;
+}
+.reddit-widget, .pretty-box-reddit{
+    & ul{
+   	 list-style: none;
+     padding-left: 0px;
+    }
+    & span.date{
+      margin-top: 20px;
+      color:$white;
+      display: block;
+
+    }
+     & a.title{
+      color:#c2b0c1;
+    }
+    background-color: #754372;
+    min-height: 600px;
+}
+
+.consigue-tu-entrada, body:not(.home) .presentacion-documentos{
+		h3.h6{
+      margin-left:20px;
+      margin-top: 20px;
+    	margin-bottom: 20px;
+    }
+    
+    
+}
+.proximos-hitos, .consigue-tu-entrada, .pretty-box{
+    padding: 30px 20px;
+    .fl-module-content {
+        margin: 0;
+    }
+    h2,h3:not(.h6):not(.h5){
+        font-size:0.8rem;
+        text-transform: uppercase;
+    }
+    a.btn-outline-secondary{
+        color: $white-headings-color;
+        &:hover{
+          color: $green;
+        }
+    }
+    .pm_widget-title-container{
+      font-size: 1rem;
+      line-height: 1.3;
+      font-family: $headings-font-family;
+      font-weight: bolder;
+      text-transform: none;
+      &:hover{
+        text-decoration: none;
+        color: $green;
+      }
+      z-index:0;
+    }
+}
+
+.milestones-widget .pm_widget-title-container {
+    margin-top: 10px;
+}
+.more_link{
+	margin-top: 10px;
+}
+.pretty-box .btn-sm{
+	margin-top: 15px;
+}
+.pretty-box > .milestones-widget::last-child{
+    margin: 20px;
+}
+body:not(.home){
+	.pretty-box{
+  	margin-bottom: 5px;
+  }
+}
+.presenta-tu-candidatura{
+  p{
+  	color: $sidebar-purple;
+  }
+  h2{
+  text-transform: uppercase; 
+  margin-bottom:30px;
+  font-size:0.8rem;
+  }
+  h3{
+  font-size: 2.67rem;
+  font-weight:bolder;
+  line-height: 3.1rem;
+  }
+}
+.franja-voluntarios {
+  background: $sidebar-purple;
+  h4{
+  	font-weight:bolder;
+  }
+}
+.up-footer{
+  background-color: $up-footer;
+  padding-top: 40px;
+  padding-bottom:40px;
+  h5{
+      font-size:0.8rem;
+  }
+  #nav_menu-2 div {
+      ul{
+          padding: 0;
+      }
+      & > ul > li{
+          padding: 0 2.2rem 1rem 0rem;
+          & > a{
+              font-weight: bold;
+          }
+          
+          ul.sub-menu > li {
+              display: block;
+              float: none;
+          }
+      }
+  }
+  .footerupright {
+      a {
+          font-weight: bold;
+      }
+  }
+}
+.down-footer{
+  background-color: $down-footer;
+  padding-top: 25px;
+  padding-bottom: 75px;
+  a{
+      font-size: .723rem;
+      font-weight: bolder; 
+      text-transform: uppercase;
+  }
+  .wpml-ls-menu-item{
+  	display:none;
+  }
+}
+.up-footer, .down-footer{
+    h2, h3, h4, h5, h6{
+      margin-bottom:30px;
+    }
+}
+.up-footer, .down-footer{
+	h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+  }
+}
+
+.presenta-tu-candidatura, .franja-voluntarios, .up-footer, .down-footer, .consigue-tu-entrada, .proximos-hitos, .pretty-box{
+	h3, h2, h4, h5, h6{
+  	color: $white-headings-color;
+  }
+  h3{
+  	font-weight:bolder;
+  }
+}
+
+.equipo {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    min-height: 8rem;
+    margin: 2rem 0;
+    img {
+        float: left;
+        border-radius: 100%;
+        margin-right: 1rem;
+        margin-top: -0.5rem;
+        background: #eee;
+    }
+    p {
+        margin: 3rem 1rem;
+    }
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .twitter {
+      color: #1a8bf0;
+      margin: 5px;
+      line-height: 2rem;
+      &:before {
+        @include icon(twitter);
+        margin-right: 2px;
+      }
+    }
+    .facebook {
+      color: #3b5998;
+      margin: 5px;
+      line-height: 2rem;
+      &:before {
+        @include icon(facebook);
+        margin-right: 2px;
+      }
+    }
+}
+
+.btn:hover{
+	color: $purple-font !important;
+}
+.btn.btn-outline-primary:hover{
+  color: $white-headings-color !important;
+}
+/* Entradas page custom buttons Porque no usamos los botones de bootstrap???? ni las variables de bootstrap??? */
+.button {
+    font-weight: bold;
+    display: block;
+    padding: 10px 18px;
+    text-align: left;
+    cursor: pointer;
+    margin: 10px;
+    &:before {
+        @include icon(external-link);
+        margin-right: 15px;
+    }
+    &.file:before {
+  		@include icon(file-pdf-o);
+		}
+    &.back:before {
+  		@include icon(arrow-left);
+		}
+    &.ticket:before {
+    	@include icon(ticket);
+    }
+    &.wait {
+    	cursor: normal;
+    	&:before {
+    		@include icon(times);
+      }
+    }
+}
+
+.btn1{
+  color: #542a44 !important;
+  border: 2px solid #542a44;
+}
+.btn2{
+  color: #683064 !important;
+  border: 2px solid #683064;
+}
+.btn3{
+  color: #5b5377 !important;
+  border: 2px solid #5b5377;
+}
+
+.csspositionsticky #toc-widget-2{
+	top: 10px;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+}
+ul.toc_widget_list {
+    border-top: 5px solid $dark-sidebar-purple;
+    padding-top: 20px;
+    padding-left: 0;
+    margin-top: 60px;
+    a{
+    	font-weight: lighter;
+      color: $dark-sidebar-purple;
+      &:hover{
+      	font-weight: bolder;
+        color: $dark-sidebar-purple;
+      }
+    }
+}
+#navbarNavDropdown.collapse.show {
+    display: block;
+    position: relative;
+    z-index: 200;
+    background-color: $brand-primary;
+}
+
+#documentos, #aportaciones {
+	.accordion-heading{
+    h2.h6{
+      text-transform: uppercase;
+      color: $gray-light;
+      margin-bottom:15px;
+    }
+  	.logo-equipo {
+      height: 160px;
+    	width: 100%;
+      background-repeat: no-repeat;
+    	background-position: center center;
+      background-size: contain;
+      background-color: #f6f6f6;
+      border: 1px solid #f6f6f6;
+    }
+    strong {
+    	font-size: 16px;
+    }
+    .email {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inline-block;
+      font-size: 0.9rem;
+    }
+    i{
+    	margin: 10px 0px;
+    }
+  }
+  .milestone-heading-pointer {
+  	cursor: pointer;
+    &.collapsed {
+      strong{
+        font-size: 16px;
+        max-height: 7rem;
+        display:block;
+        overflow:hidden;
+      } 
+      .accordion-heading-fa-i:before {
+        @include icon(angle-down);
+      }
+    }
+  }  
+  .document-box{
+  	padding-top: 40px;
+    padding-bottom: 10px;
+    h4.h6{
+    	color: $gray-light;
+      margin-bottom:15px;
+    }
+    h3{
+    	font-weight:bolder;
+    }
+    &:first-child{
+    	padding-top:10px;
+    }
+  }
+}
+#documentos .accordion-heading {
+  padding-top:15px;
+  padding-bottom:15px;
+  i {
+  	margin-top: 30px;
+  }
+}
+#aportaciones .topic {
+	cursor: pointer;
+	& i:before {
+  	@include icon(folder-open-o);
+  }
+	&.collapsed i:before {
+  	@include icon(folder-o);
+  }
+}
+
+.page-template-template-resultado {
+	h2 {
+  	clear: both;
+	  text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 1rem;
+    border-top: 1px solid $purple;
+    padding-top: 5px;
+    margin-top: 10px;
+  }
+  h3 {
+	  text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: $gray;
+    margin-bottom: 0;
+  }
+  &.page-parent {
+  	.opcion {
+    	img {
+        float: left;
+        margin: 0 20px 0 0;
+        height: 100px;
+        width: 100px;
+      }
+      &:hover {
+      	color: inherit;
+      	img {
+        	border-color: white;
+      	}
+      }
+  	}
+    a.more {
+      font-size: 0.8em;
+      display: block;
+      clear: both;
+    }
+  }
+}
+h4{
+ 	color:$purple;
+}
+
+h5{
+	font-size:1.1rem;
+ 	color:$purple;
+  text-transform: uppercase;
+  &:before {
+   margin-right: 10px;
+  }
+  &.car:before {
+   @include icon(car);
+  }
+  &.bed:before {
+   @include icon(bed);
+  }
+  &.address:before {
+   @include icon(map-signs);
+  }
+  &.bus:before {
+   @include icon(bus);
+  }
+}
+/** para ocultar que aparezca el doble idioma en el desplegable de idioma plegado **/
+.wpml-ls-display{ display:none; }
+.dropdown-menu .wpml-ls-display{ display:inline !important; }
+
+/** links de navegación en entradas **/
+.nav-links span{
+  max-width: 47%;
+  border: 2px solid #683064;
+  color: #683064 !important;
+  cursor: pointer;
+  display: block;
+  font-weight: 700;
+  padding: 10px 18px;
+  margin: 5px 0;
+}
+.float-xs-left{
+  float: left;
+  text-align: left !important;
+}
+.float-xs-right{
+  text-align: right !important;
+  float: right;
+}
+
+/** opciones **/
+#opciones{
+	& i:before {
+   	@include icon(users);
+  }
+}
+.opcion{
+    transition: all 0.5s ease;
+    & img{
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      text-align: center;
+      margin: 15px 0 5px 0;
+      transition: all 0.3s ease;
+      border: 3px solid #fff;
+    }
+    &:hover{
+ 			color: #6e1562;
+      & img{
+        border-color: #6e1562;
+        filter: drop-shadow(0px 0px 2px #6e1562);
+        -webkit-filter: brightness(114%);
+        filter: brightness(114%);
+        -webkit-filter: contrast(114%);
+        filter: contrast(114%);
+      }
+	 }
+}
+.opcion-image{
+  width: 100%;
+}
+/* Listas de candidaturas */
+#listas .lista h2 {
+  cursor: pointer;
+}
+.lista-motivacion {
+  margin:5px 0;
+}
+.lista-docs {
+  list-style:none;
+  margin-top:10px;
+  margin-left:0px;
+  & li:before {
+    margin-right:10px;
+    font-family: 'FontAwesome';
+    content: "\f15b";
+    color: $purple-font;
+  }
+}
+
+.home p{
+  margin-bottom: 0;
+}
+.equipo1, .equipo2, .equipo3 {
+  &:before {
+	  @include icon(circle);
+    margin-right: 5px;
+  }
+}
+.equipo1:before {
+  color: #662E93;
+}
+.equipo2:before {
+  color: #1B1464;
+}
+.equipo3:before {
+  color: #95258F;
+}
+.documento .opcion {
+	img {
+  	width: inherit;
+  	border-radius: 0;
+  	border: none;
+    height: 100px;
+    margin-top: 30px;
+  }
+  &:hover img {
+  	border:none;
+  }
+}
+
+@include media-breakpoint-down(sm){
+	
+	.navbar{
+    .navbar-brand {
+			width: 70%;
+    }
+  }
+  .presentacion h1 {
+    font-size: 2rem;
+	}
+  .presentacion .btn-group-lg>a.btn, .presentacion a.btn-lg {
+    padding:5px;
+	}
+  #topNav {
+    #useful-links > li {
+    	display:none;
+      &.wpml-ls-current-language {
+        display: block;
+        text-align: right;
+        width: 100%;
+        .dropdown-menu {
+        	margin-top: 0;
+          min-width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  #bottomNav{
+  	ul{
+    	text-align:center;
+      display: block;
+      justify-content: initial;
+      li{
+      	float:none;
+        width:auto;
+      }
+    }
+  }
+  #documentos, #aportaciones { 
+  	.milestone-heading-pointer > .row {
+  		min-height: 40px;
+  	}
+  }
+}
+@include media-breakpoint-down(md){
+	.fl-node-587778caecf8e{
+  	max-width: inherit;
+  }
+  .proximos-hitos .milestones-widget{
+  	justify-content: flex-start;
+  }
+}
+@include media-breakpoint-down(lg){
+	.down-footer .col-lg-4 a {
+  	width: 100%;
+    display: block;
+    text-align:center;
+    img{
+    	float: none;
+      margin-top: 30px;
+    }
+  }
+  #toc-widget-2{
+    max-width:210px;
+  }
+}
+@include media-breakpoint-between(md, lg) {
+    .noticias{
+    	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+1,ffffff+67,754372+67,754372+100 */
+      background: #ffffff; /* Old browsers */
+      background: -moz-linear-gradient(left, #ffffff 1%, #ffffff 70%, #754372 70%, #754372 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #ffffff 1%,#ffffff 70%,#754372 70%,#754372 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #ffffff 1%,#ffffff 70%,#754372 70%,#754372 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#754372',GradientType=1 ); /* IE6-9 */
+    }
+    .fl-node-587778cae77f2 > .fl-row-content-wrap {
+        padding-right: 0;
+    }
+    
+    	.presentacion-documentos, .consigue-tu-entrada{
+        h3.h5, h3.h6 {
+          margin-left: 0px;
+          font-size: 1rem;
+          
+        }
+      }
+      .proximos-hitos h3{
+      	font-size: 0.7rem;
+      }
+    
+    .pretty-box a.btn-outline-secondary{
+    	font-size: 0.7rem;
+    }
+}
+@include media-breakpoint-between(lg, xl){
+	#toc-widget-2{
+    min-width: 295px;
+  }
+}
+@include media-breakpoint-up(xl){
+	#toc-widget-2{
+    min-width: 345px;
+  }
+}
+
+
+/* Estilos para el tooltip del gráfico de candidatos */
+.d3-tip {
+  line-height: 1;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+.resultado-lista {
+  font-weight: bold;
+  font-size: 16px;
+}
+.opcion_baja{
+  font-size: 13px;
+  font-style: italic;
+  &:before {
+    color:$color-warning;
+    @include icon(asterisk);
+    margin-right: 5px;	
+  }
+}
+.opcion_inactiva{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}

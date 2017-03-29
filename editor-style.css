@@ -1,0 +1,16 @@
+.lead {
+    font-weight: bold;
+    color: purple;
+}
+.equipo p {
+    font-size: 0.9em;
+    color: brown;
+}
+.equipo img {
+    float: left;
+}
+.equipo:after {
+    content: '';
+    display: block;
+    clear: both;
+}

@@ -1,0 +1,72 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+// As example you find one of the most important Bootstrap variable below: $brand-primary.
+// Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
+// Just add your color code here, compile the theme.scss file to change this color everywhere
+
+// Start with assigning color names to specific hex values.
+$very-dark-purple: 						    #290727 !default; //morado oscuro headbar
+$purple: 									#6E1562; // Morado header
+$dark-purple: 								#59194E; // Morado header active
+$purple-font:                               #683064; // Morado de fuentes
+$green: 									#90BC9D; // #alerta
+$sidebar-purple: 					        #7D688F !default; //Morado sidebar
+$dark-sidebar-purple:                      #5A5276 !default; //Morado oscuro del sidebar
+$up-footer:          			            #754372 !default; //Morado del footer
+$down-footer:                               $purple !default; //
+$color-warning:                               $purple !default; //
+
+// Reassign color vars to semantic color scheme
+
+$brand-inverse:             $dark-purple;
+$brand-primary:             $purple;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:       #FEFEFE;
+
+// Fontscd
+//
+// Font, line-height, and color for body text, headings, and more.
+$white-headings-color:         #FDFDFD !default;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:            $dark-purple;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded:            false;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-primary-color:              $white;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $btn-primary-bg;
+
+$btn-secondary-color:            $gray-lighter;
+$btn-secondary-bg:               $white !default;
+$btn-secondary-border:           $gray-lighter;
+
+
+// Navbar
+
+$navbar-inverse-color:                $white-headings-color;
+$navbar-inverse-hover-color:          $navbar-inverse-color;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-bg:                    $very-dark-purple !default;
+
