@@ -1,5 +1,5 @@
 # Tema basado en understrap-child
-Basic Child Theme for UnderStrap Theme Framework: https://github.com/holger1411/understrap
+Basic Child Theme for Podemos\undestrap: https://github.com/podemos-info/understrap
 
 ## How it works
 It shares with the parent theme all PHP files and adds its own functions.php on top of the UnderStrap parent themes functions.php.
@@ -10,7 +10,7 @@ Instead it uses the UnderStrap Parent Theme as dependency via Bower and compiles
 Uses the Enqueue method the load and sort the CSS file the right way instead of the old @import method.
 
 ## Installation
-1. Install the parent theme UnderStrap first: https://github.com/holger1411/understrap
+1. Install the parent theme Podemos\undestrap first: https://github.com/podemos-info/understrap
 - IMPORTANT: If you download it from GitHub make sure you rename the "understrap-master.zip" file just to "understrap.zip" or you might have problems using this child themes !!
 
 2. Just upload the understrap-child folder to your wp-content/themes directory
